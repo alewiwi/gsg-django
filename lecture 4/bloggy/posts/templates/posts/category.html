@@ -1,0 +1,12 @@
+{% extends 'posts/master.html'%}
+
+{% block contents%}
+    <h1>{{category.title}}</h1>
+
+    <ul>
+        {% for p in category.post_set.all%}
+            <li>{{p.title}}</li>
+        {%endfor%}
+    </ul>
+    
+{% endblock%}
