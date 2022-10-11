@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Post
+from .models import Category, Post
 
 # Create your views here.
 def index(request):
@@ -15,3 +15,7 @@ def getPost(request,post_id):
     context = {"post":post}
     return render(request,'posts/post.html',context=context)
 
+def getCategories(request,category_id):
+    categories = Category.objects.all()
+    context = {"categories" : categories}
+    return render(request,'categories/categories.html',context = context)

@@ -1,0 +1,16 @@
+{% extends 'posts/master.html'%}
+
+{% block contents%}
+    <table>
+        <theader>
+            <tr>
+                <th>title</th>
+            </tr>
+        </theader>
+        {% for category in categories%}
+            <tr>
+                <td>{{category.title}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock%}

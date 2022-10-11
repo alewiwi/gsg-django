@@ -9,3 +9,6 @@ class Comment(models.Model):
     text= models.TextField()
     cdate = models.DateField(auto_now=False)
     visible= models.BooleanField()
+
+class Category(models.Model):
+    title = models.CharField(max_length=20)
