@@ -1,0 +1,7 @@
+{% if post_list%}
+    {%for post in post_list%}
+        {{post.title}}<br>
+    {%endfor%}
+{% else %}
+    <h1> No Posts Found</h1>
+{%endif%}
